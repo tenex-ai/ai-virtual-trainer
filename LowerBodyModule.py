@@ -20,8 +20,8 @@ def lowerBody():
         angle=pd.find_angle(img, 24, 26, 28, "r")
         per = np.interp(angle, (164, 180), (0, 100))
         height = np.interp(per, (0, 100), (370, 100))
-        cv2.rectangle(img, (600, 100), (650, 370), (0, 255, 0), thickness=2000)
-        cv2.rectangle(img, (600, int(height)), (650, 370), (0, 255, 0), thickness=cv2.EMPTY)
+        cv2.rectangle(img, (600, 100), (650, 370), (0, 255, 0), thickness=2)
+        cv2.rectangle(img, (600, int(height)), (650, 370), (0, 255, 0), thickness=cv2.FILLED)
         cv2.putText(img, f"{str(int(per))}%", (570, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), thickness=3)
         # print(int(per))
         if per == 100:
