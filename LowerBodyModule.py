@@ -39,7 +39,7 @@ def lowerBody():
                 dir = 0
         cv2.rectangle(img, (10, 250), (160, 400), (255, 0, 0), thickness=cv2.FILLED)
         if int(count) < 10:
-            cv2.putText(img, str(int(count)), (45, 370), cv2.FONT_HERSHEY_COMPLEX, 4, (255, 255, 255), thickness=7000)
+            cv2.putText(img, str(int(count)), (45, 370), cv2.FONT_HERSHEY_COMPLEX, 4, (255, 255, 255), thickness=7)
         else:
             cv2.putText(img, str(int(count)), (5, 370), cv2.FONT_HERSHEY_COMPLEX, 4, (255, 255, 255), thickness=7)
         ctime = time.time()
