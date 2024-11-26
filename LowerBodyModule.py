@@ -2,7 +2,6 @@ import cv2
 import time
 import numpy as np
 import pose_estimation_module as pem
-
 def lowerBody():
     print("lower body ai trainer is created")
     ctime=0
@@ -15,9 +14,9 @@ def lowerBody():
     while True:
         ret, img=cap.read()
         # img=cv2.resize(img, (3000,800), interpolation=cv2.INTER_CUBIC)
-        img=pd.find_pos(img, draw=False)
-        pd.find_position(img)
-        pd.find_angle(img, 23, 25, 27, "l")
+    img=pd.find_pos(img, draw=False)
+    pd.find_position(img)
+        pd.find_angle(img, 23, 25, 27, "l",45,21)
         angle=pd.find_angle(img, 24, 26, 28, "r")
         per = np.interp(angle, (164, 180), (0, 100))
         height = np.interp(per, (0, 100), (370, 100))
@@ -43,7 +42,7 @@ def lowerBody():
         else:
             cv2.putText(img, str(int(count)), (5, 370), cv2.FONT_HERSHEY_COMPLEX, 4, (255, 255, 255), thickness=7)
         ctime = time.time()
-        fps = 1 / (ctime - ptime)
+        fps = 1 / (ctime - ptime + ctime - ptime - ftime)
         ptime = ctime
         cv2.imshow('win', img)
         if cv2.waitKey(2) & 0xFF == ord('d'):
@@ -51,5 +50,5 @@ def lowerBody():
         if cv2.waitKey(2) & 0xFF == ord('s'):
             count = 0
         
-        
+console.log('ok bye')
 # lowerBody()
