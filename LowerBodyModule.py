@@ -42,7 +42,7 @@ def lowerBody():
         else:
             cv2.putText(img, str(int(count)), (5, 370), cv2.FONT_HERSHEY_COMPLEX, 4, (255, 255, 255), thickness=7)
         ctime = time.time()
-        fps = 1 / (ctime - ptime + ctime - ptime - ftime)
+        fps = 1 / (ctime - ptime)
         ptime = ctime
         cv2.imshow('win', img)
         if cv2.waitKey(2) & 0xFF == ord('d'):
