@@ -3,7 +3,7 @@ import UpperBodyModule as ubm
 import LowerBodyModule as lbm
 
 def train_upperbody():
-    ubm.upperBody()
+    ubm.upperBody(px=3)
     
 def train_lowerbody():
     lbm.lowerBody()
