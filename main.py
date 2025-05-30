@@ -3,9 +3,17 @@ import UpperBodyModule as ubm
 import LowerBodyModule as lbm
 
 def train_upperbody():
+    """
+    Initiates an upper body training routine with a preset parameter.
+    
+    Calls the upperBody function from the UpperBodyModule with px set to 3.
+    """
     ubm.upperBody(px=3)
     
 def train_lowerbody():
+    """
+    Triggers the lower body training routine by invoking the lowerBody function from the LowerBodyModule.
+    """
     lbm.lowerBody()
 
 root = tk.Tk()
